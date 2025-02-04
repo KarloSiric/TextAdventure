@@ -2,7 +2,7 @@
  * @Author: karlosiric
  * @Date:   2025-02-04 19:17:06
  * @Last Modified by:   karlosiric
- * @Last Modified time: 2025-02-04 19:42:55
+ * @Last Modified time: 2025-02-04 20:04:19
  */
 
 /*
@@ -20,17 +20,16 @@
  * We started off with the simple code, moving on to next:
  * We have a function getInput, also the parse and execute function for executing the user commands and also main
  */
-static char input[100] = "look around"; // this is for storing the user input
+static char input[100] = "look around"; // this is for storing the user input, it a string buffer
 
 static bool getInput(void) 
 {
-    printf("\n--> ");
+    printf("\nPlease enter command. ");
     return fgets(input, sizeof(input), stdin) != NULL;
 }
 
 int main(void)
 {
-    
     
     printf("Welcome to the Little Cave Adventure\n");
     printf("It is very dark in here.\n");
