@@ -2,7 +2,7 @@
  * @Author: karlosiric
  * @Date:   2025-02-04 20:08:48
  * @Last Modified by:   karlosiric
- * @Last Modified time: 2025-02-04 22:52:47
+ * @Last Modified time: 2025-02-04 22:59:29
  */
 
 /*
@@ -54,6 +54,28 @@ bool parseAndExecute(const char *input) // this is a function that takes as a
         else if (strcmp(verb, "go") == 0) 
         {
             printf("It's too dark to go anywhere.\n");
+        }
+        else if (strcmp(verb, "take") == 0) 
+        {
+            if (noun != NULL) 
+            {
+                printf("I don't see a %s here.\n", noun);
+            }
+            else 
+            {
+                printf("Take what?\n");
+            }
+        }
+        else if (strcmp(verb, "drop") == 0) 
+        {
+            if (noun != NULL) 
+            {
+                printf("You don't have a %s.\n", noun);
+            }
+            else 
+            {
+                printf("Drop what?\n");
+            }
         }
         else 
         {
