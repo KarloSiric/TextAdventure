@@ -2,7 +2,7 @@
  * @Author: karlosiric
  * @Date:   2025-02-04 19:17:06
  * @Last Modified by:   karlosiric
- * @Last Modified time: 2025-02-04 22:51:40
+ * @Last Modified time: 2025-02-04 22:55:01
  */
 
 /*
@@ -27,7 +27,7 @@ static bool getInput(void) // here this function is used to getting the input fr
                // keyboard from the user and it returns true or false depending
                // on if the user entered something or not.
 {
-    printf("\n --> Please enter command.\n");
+    printf("\n--> Please enter command.\n");
     return fgets(input, sizeof(input), stdin) != NULL;
 }
 
