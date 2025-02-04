@@ -2,7 +2,7 @@
  * @Author: karlosiric
  * @Date:   2025-02-04 19:17:06
  * @Last Modified by:   karlosiric
- * @Last Modified time: 2025-02-04 19:27:14
+ * @Last Modified time: 2025-02-04 19:32:48
  */
 
 /*
@@ -15,9 +15,12 @@
 
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
+// we start off with a simple code at the beginning
+
+int main(void)
 {
-    
-    printf("Hello WOrld");
+    printf("Welcome to the Little Cave Adventure.\n");
+    printf("It is very dark in here.\n");
+    printf("\nBye!\n");
     return 0;
 }
