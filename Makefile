@@ -10,10 +10,10 @@ SRCDIR = .
 OBJDIR = obj
 BINDIR = bin
 
-# Get all .c files in the directory
+# Project name and files
+TARGET = $(BINDIR)/textadventure
 SOURCES = $(wildcard $(SRCDIR)/*.c)
 OBJECTS = $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
-EXECUTABLES = $(SOURCES:$(SRCDIR)/%.c=$(BINDIR)/%)
 
 # Ensure build directories exist
 $(shell mkdir -p $(OBJDIR) $(BINDIR))
@@ -28,17 +28,17 @@ RESET = \033[0m
 .PHONY: all clean rebuild force help logs
 
 # Default target
-all: $(EXECUTABLES)
+all: $(TARGET)
 
 # Compile object files
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@echo "$(BLUE)Compiling $<...$(RESET)"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-# Link executables
-$(BINDIR)/%: $(OBJDIR)/%.o
+# Link executable
+$(TARGET): $(OBJECTS)
 	@echo "$(BLUE)Linking $@...$(RESET)"
-	@$(CC) $(CFLAGS) $< $(LDFLAGS) -o $@
+	@$(CC) $(OBJECTS) $(LDFLAGS) -o $@
 	@echo "$(GREEN)Finished building $@$(RESET)"
 
 # Generate compilation logs
@@ -68,7 +68,7 @@ clean:
 # Help message
 help:
 	@echo "Usage:"
-	@echo "  make          - Compile all .c files"
+	@echo "  make          - Compile the project"
 	@echo "  make logs     - Compile and generate warning/error logs"
 	@echo "  make clean    - Remove all compiled files and logs"
 	@echo "  make rebuild  - Clean and rebuild all files"
