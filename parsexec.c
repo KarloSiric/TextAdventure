@@ -2,7 +2,7 @@
  * @Author: karlosiric
  * @Date:   2025-02-04 20:08:48
  * @Last Modified by:   karlosiric
- * @Last Modified time: 2025-02-04 22:27:42
+ * @Last Modified time: 2025-02-04 22:47:59
  */
 
 /*
@@ -35,7 +35,7 @@ bool parseAndExecute(const char *input) // this is a function that takes as a
     /*
      * Also we can try doing the following, we can try making the tolower work for the verb so we can make the verb case insensitive
      */
-
+    
     for (char *p = verb; *p != '\0'; p++)
     {
         *p = tolower(*p);

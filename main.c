@@ -2,7 +2,7 @@
  * @Author: karlosiric
  * @Date:   2025-02-04 19:17:06
  * @Last Modified by:   karlosiric
- * @Last Modified time: 2025-02-04 22:27:45
+ * @Last Modified time: 2025-02-04 22:47:43
  */
 
 /*
@@ -21,9 +21,8 @@
  * executing the user commands and also main
  */
 
-static char input[100] =
-    "look around"; // this is for storing the user input, it a string buffer
-
+static char input[100] = "look around"; // this is for storing the user input, it a string buffer
+ 
 static bool getInput(void) // here this function is used to getting the input from the
                // keyboard from the user and it returns true or false depending
                // on if the user entered something or not.
