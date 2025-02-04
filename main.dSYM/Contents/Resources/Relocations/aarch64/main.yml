@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/karlosiric/Documents/SublimeText Programming/TextAdventure/main'
+relocations:     []
+...
